@@ -1,0 +1,292 @@
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+:root {
+    font-family: 'Segoe UI', sans-serif;
+    --ig-primary-background: #000;
+    --ig-text-primary: #f5f5f5;
+    --ig-hover-overlay: rgba(255, 255, 255, 0.1);
+    --ig-border-navbar: #2e2e2e;
+    --tablet-breakpoint: 768px;
+    --desktop-breakpoint: 1264px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+
+
+body{
+    background-color: rgb(247, 242, 242);
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    grid-template-areas: 
+        "nav header" 
+        "nav main"
+    
+    
+    
+  /* height: 100vh;*/
+}
+
+/*main{
+    padding: 1 rem;
+    width: 100%;
+    height: 100%;
+}*/
+
+main{
+    grid-area: main;
+    width: 4fr;
+   
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.link{
+    display: flex;
+    padding: 12px;
+    border-radius: 8px;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.link a{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 16px;
+    display: flex;
+    gap: 40px;
+    border-top: 1px  solid rgb(233, 230, 227);
+    background-color: rgb(247, 242, 242);
+    grid-area: nav;
+}
+
+.navbar-container{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
+
+.link-mobile{
+    display: none;
+}
+
+.navbar-more{
+    display: none;
+}
+
+.navbar-logo{
+    display: none;
+}
+.navbar-logo .navbar-image{
+    display: none;
+}
+.navbar-logo .navbar-isotype{
+    display: none;
+}
+
+.link img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-text{
+    display: none;
+}
+
+header{
+  
+    margin: 15px;
+    padding: 20px 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+
+    grid-area: header;
+
+}
+
+
+
+header .profile-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+   
+}
+
+.first-line{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.first-line a{
+    color: #616161;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.first-line button{
+    width: 100px;
+    height: 30px;
+    
+    background-color: #f5f5f5;
+    border: solid #dbdbdb 1px;
+    cursor: pointer;
+    border-radius: 25% ;
+}
+
+.second-line{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+}
+
+.second-line p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.third-line{
+    display: flex;
+    flex-direction: column;
+}
+
+.third-line span{
+    font-size: 16px;
+
+}
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto 0 170px;
+    padding: 15px;
+    }
+
+.main-nav a{
+    color: #333;
+        text-decoration: none;
+        font-size: 15px;
+    }
+.pictures{
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-template-rows: repeat(5,auto);
+    gap: 2%;
+    height: auto;
+    }
+
+.pictures div img{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    }
+
+/*Tablet version*/
+
+@media(min-width:768px){
+
+    .navbar{
+        position: inherit;
+        width: 50px;
+        border-top: none;
+        border-right:1px  solid rgb(233, 230, 227);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-container{
+        flex-direction:column ;
+        flex: 1;
+        justify-content: start;
+    }
+    
+    .navbar-logo{
+        display: flex;
+        padding: 24px 0 0 0;
+    }
+
+    .navbar-logo.navbar-isotype{
+        display: flex;
+    }
+    .navbar-logo .logo-image{
+        display: none;
+    }
+
+    .navbar-more{
+        display: flex;
+    }
+
+    .link-mobile{
+        display:flex ;
+    }
+
+    .link:hover{
+        background-color: #ebe3e3;
+        transition: 200ms;
+        cursor: pointer;
+    }
+
+    .link:hover .link{
+        transition: 100ms;
+        transform: scale(1,05);
+    }
+
+    
+
+
+    /*desktop device*/
+    @media(min-width:1264px){
+
+        .navbar{
+            align-items: start;
+            width: 200px;
+            
+        }
+
+        .navbar-logo{
+            display: flex;
+            padding: 24px 0 0 12px;
+        }
+
+        .navbar-logo .logo-image{
+            display: flex;
+        }
+        .navbar-logo .logo-isotype{
+            display: none;
+        }
+        .navbar .nav-text{
+            display: block;
+            padding-right: 50px;
+        }
+
+    }
+}
