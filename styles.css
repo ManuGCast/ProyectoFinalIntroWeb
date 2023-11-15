@@ -1,12 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
 :root {
     font-family: 'Segoe UI', sans-serif;
-    --ig-primary-background: #000;
+    /*--ig-primary-background: #000;
     --ig-text-primary: #f5f5f5;
     --ig-hover-overlay: rgba(255, 255, 255, 0.1);
     --ig-border-navbar: #2e2e2e;
     --tablet-breakpoint: 768px;
-    --desktop-breakpoint: 1264px;
+    --desktop-breakpoint: 1264px;*/
 }
 
 html {
@@ -43,11 +43,11 @@ main{
    
 }
 
-li{
+.navbar li{
     list-style: none;
 }
 
-a{
+.navbar a{
     text-decoration: none;
     color: black;
 }
@@ -123,12 +123,9 @@ header{
     width: auto;
     display: flex;
     flex-direction: column;
-
     grid-area: header;
 
 }
-
-
 
 header .profile-photo{
     width: 150px;
@@ -208,6 +205,7 @@ header .profile-photo{
     width: 300px;
     height: 300px;
     cursor: pointer;
+    object-fit: cover;
     }
 
 /*Tablet version*/
@@ -259,8 +257,6 @@ header .profile-photo{
         transition: 100ms;
         transform: scale(1,05);
     }
-
-    
 
 
     /*desktop device*/
